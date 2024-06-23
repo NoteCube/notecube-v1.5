@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sadasdasd</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+<body>
+      <nav class="block">
+        <div class="flex-row-centered-links">
+
+          <a href="index.html" class="flex-row-centered">
+            <img class="logo" src="notecube.png" alt="LOGO" />
+          </a>
+          <style>
+            .a-margin {
+              margin-right: 45%;
+              text-decoration: none;
+            }
+          </style>
+          <a href="index.html" class="a-margin">
+            <h3 class="heading-logo">NoteCube</h3>
+          </a>
+
+            <div class="flex-row-centered-links">
+                <a href="index.html" class="link">Home </a>
+                <a href="note.html" class="link">Note</a>
+                <a href="about.html" class="link">About/Updates</a>
+                <div id="loadMenu" class="dropdown">
+                    <button class="dropbtn">🔽</button>
+                    <div class="dropdown-content">
+                      <a href="index.html">Home</a>
+                      <a href="note.html">Note</a>
+                      <a href="about.html">About/Updates</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </nav>
+    <div class="updates-tag">
+        
+    </div>
+  <br>
+  <div class="flex">
+    <h1 class="heading-note" id="noteNameDisplay"></h1>
+  </div>
+  <br>
+  <div class="flex-row-centered"> 
+    <div class="flex-column-centered">
+        <div class="sub-heading-gadget">
+            <h2>Gadgets ⚒️</h2>
+        </div>
+        <div class="button-barrier">
+            <div class="flex-column-gadget">
+                <button class="button-gadget" onclick="saveNote()">Save 📁</button>
+                <button class="button-gadget" onclick="nameNote()">Rename Note 📄</button>
+                <button class="button-gadget" onclick="newNote()">New Note ➕</button>
+                <input class="font-size" id="font-size" type="number" placeholder="Font Size 🅰️" onchange="fontSize()"></input>
+            </div>
+        </div>
+    </div>
+    <div class="flex-column-centered-note">
+        <div class="sub-heading-note">
+            <h2>Note 📒</h2>
+        </div>
+            <textarea class="text-box" id="text-box" placeholder="Write your note here! ✏️"></textarea>
+    </div>
+  </div>
+    <br>
+    <br>
+    <div class="flex">
+
+        <div class="sub-heading-link" id ="linkClose">
+            <button class="link-close">
+                <img src="xmark-solid.svg" alt="xmark-solid" class="x" onclick="linkClose()">
+            </button>
+            <br>
+            
+
+            <style>
+                .flex-column-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                }
+                
+                @media(max-width: 800px) {
+                    .flex-column-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                }
+                .link-close {
+                    float: right;
+                    height: 30px;
+                    width: 30px;
+                    margin-inline: 12px;
+                    color: white;
+                    
+                }
+            </style>
+            <br>
+            <div class="flex-column-link" id="linkClose">
+                <h2>Link Clipboard📋</h2>
+                <div class="link-input-flex">
+                    <input class="link-input"id ="linkInput" placeholder="Paste Link Here:" type="text" onkeydown="checkEnter(event)">
+
+                </div>    
+                <button class="link-delete" onclick="deleteLink()">Delete last Link</button>
+            </div>
+        </div>
+
+        <div class="link-box" id="linkBox">
+            <p id="Linky" class="heading"></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
